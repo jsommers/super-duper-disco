@@ -21,7 +21,5 @@ test:
   database: db/test.sqlite3
 
 production:
-  adapter: pg
-  database: ENV['PGDATABASE']
-  username: ENV['PGUSER']
-  password: ENV['PGPASSWORD']
+  <<: *default
+  database: db/test.sqlite3
